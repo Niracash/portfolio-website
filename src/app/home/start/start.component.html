@@ -1,0 +1,120 @@
+<div
+  class="max-w-[85rem] text-left flex flex-col lg:flex-row justify-start mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-10"
+  id="about"
+>
+  <div class="flex mt-44 w-full flex-col lg:flex-row">
+    <!-- particles -->
+    <div id="particles-js"></div>
+    <!-- End particles -->
+
+    <!-- Title -->
+    <div class="lg:mt-5 max-w-2xl text-center mt-3 md:text-left lg:text-left">
+        <div class="text-white">
+          <!-- Increase the size of "Hi" and "I am," -->
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-source-code-pro">Hi!</h1> <!-- Adjusted sizes -->
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-source-code-pro">I am, <span class="font-semibold text-3xl md:text-4xl lg:text-5xl text-errorred inline">Nirakash</span></h1> <!-- Adjusted sizes and color for "Nirakash Sapkota" -->
+        </div>
+      <h1
+      class="font-bold text-xl md:text-5xl mt-4 inline-block text-successgreen typewriter"
+    >
+      Software Developer
+    </h1>
+      <div class="mt-5 max-w-3xl text-left">
+        <p class="text-lg text-gray-400">
+          Enthusiastic about crafting groundbreaking web experiences. Skilled in
+          HTML, CSS, JavaScript, Angular, Java, and Node.js. Let's collaborate
+          to create something extraordinary! 🚀 Let's build together!
+        </p>
+      </div>
+
+      <div class="text-white font-fira-code mt-3">
+        <p>Check out my socials:</p>
+      </div>
+
+      <!-- Buttons -->
+      <div
+        class="flex gap-4 z-50 justify-center md:justify-start lg:justify-start"
+      >
+        <div class="mt-8 gap-3">
+          <div
+            class="overflow-hidden w-32 p-2 h-12 bg-transparent border-white border-2 text-white rounded-md text-xl font-bold cursor-pointer relative z-10 group"
+          >
+            <i class="pi pi-github"></i>
+            <a
+              href="https://github.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Github</a
+            >
+            <span
+              class="absolute w-36 h-32 -top-8 -left-2 bg-white rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left"
+            ></span>
+            <span
+              class="absolute w-36 h-32 -top-8 -left-2 bg-errorred rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"
+            ></span>
+            <span
+              class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2 left-6 z-10"
+              ><a
+                href="https://github.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                View</a
+              ></span
+            >
+          </div>
+        </div>
+        <div class="mt-8 gap-3">
+          <div
+            class="overflow-hidden w-32 p-2 h-12 bg-transparent border-white border-2 text-white rounded-md text-xl font-bold cursor-pointer relative z-10 group"
+          >
+            <i class="pi pi-linkedin"></i>
+            <a
+              href="https://www.linkedin.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Linkedin</a
+            >
+            <span
+              class="absolute w-36 h-32 -top-8 -left-2 bg-white rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left"
+            ></span>
+            <span
+              class="absolute w-36 h-32 -top-8 -left-2 bg-successgreen rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"
+            ></span>
+            <span
+              class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2 left-6 z-10"
+              ><a
+                href="https://github.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                View</a
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+      <!-- End Buttons -->
+      <!-- End Title -->
+    </div>
+
+
+  </div>
+
+  <div
+    [style.opacity]="showArrow ? '1' : '0'"
+    class="absolute bottom-11 left-0 right-0 hidden md:flex justify-center z-50"
+    id="arrow"
+  >
+    <a (click)="scrollTo('about_me')" class="cursor-pointer">
+      <i
+        class="pi pi-angle-double-down text-white text-xl lg:text-2xl bounce"
+      ></i>
+    </a>
+  </div>
+</div>
+
+<!-- End Hero -->
+>
