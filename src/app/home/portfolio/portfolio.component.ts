@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { gsap } from 'gsap/gsap-core';
 
 @Component({
   selector: 'app-portfolio',
@@ -64,40 +65,5 @@ export class PortfolioComponent {
       ]
     },
   ]
-
-
-
-  ngAfterViewInit() {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.fromTo("#card", {
-      y: 100,
-      opacity: 0,
-    }, {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      scrollTrigger: {
-        trigger: "#card",
-        start: "top 75%",
-        once: true
-      },
-    });
-
-    gsap.fromTo("#projects", {
-      y: 100,
-      opacity: 0,
-    }, {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      scrollTrigger: {
-        trigger: "#projects",
-        start: "top 75%",
-        once: true
-      },
-    });
-
-  }
 
 }
