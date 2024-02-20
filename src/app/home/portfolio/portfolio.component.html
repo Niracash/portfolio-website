@@ -1,5 +1,5 @@
 <!-- Card Blog -->
-<div class="max-w-[40rem] h-full px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+<div class="max-w-full h-full px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
   <h1
     id="card"
     class="text-white font-fira-code text-center mb-10 text-2xl md:text-3xl lg:text-4xl font-bold bg-clip-text"
@@ -10,12 +10,12 @@
     ></div>
   </h1>
   <!-- Grid -->
-  <div class="grid sm:grid-cols-1 lg:grid-cols-1 gap-8">
+  <div class="grid sm:grid-cols-1 lg:grid-cols-4 gap-8">
     @for (item of projects; track $index) {
     <!-- Card -->
     <div
       id="projects"
-      class="group flex flex-col h-full border shadow-sm rounded-xl bg-slate-900 border-gray-700 shadow-slate-700/[.7]"
+      class="group flex flex-col h-full shadow-sm rounded-xl bg-black shadow-slate-700/[.7]"
     >
       <!-- Slider -->
 
@@ -55,7 +55,7 @@
 
         <button
           type="button"
-          class="hs-carousel-prev hs-carousel:disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/[.1]"
+          class="hs-carousel-prev hs-carousel:disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-white hover:bg-white hover:text-black"
         >
           <span class="text-2xl" aria-hidden="true">
             <i class="pi pi-angle-left"></i>
@@ -64,7 +64,7 @@
         </button>
         <button
           type="button"
-          class="hs-carousel-next hs-carousel:disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/[.1]"
+          class="hs-carousel-next hs-carousel:disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-white hover:bg-white hover:text-black"
         >
           <span class="sr-only">Next</span>
           <span class="text-2xl" aria-hidden="true">
@@ -77,7 +77,7 @@
         >
           @for ( image of item.image; track $index) {
           <span
-            class="hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 w-3 h-3 border border-gray-400 rounded-full cursor-pointer"
+            class="hs-carousel-active:bg-blue-700 hs-carousel-active:border-white w-3 h-3 border border-white rounded-full cursor-pointer"
           ></span>
           }
         </div>
@@ -87,7 +87,7 @@
       <div class="p-4 md:p-6 flex flex-wrap">
         @for (tech of item.techs; track $index) {
         <span
-          class="mx-1 p-1 text-xs font-semibold uppercase rounded-full bg-technology text-blue-500 min-w-max md:mt-0 mt-2"
+          class="mx-1 p-1 text-xs font-semibold uppercase rounded-full bg-terminal text-white min-w-max md:mt-0 mt-2"
         >
           @if (tech==='express') {
           <i class="devicon-express-original"></i>
@@ -98,23 +98,23 @@
         </span>
         }
 
-        <h3 class="text-xl font-fira-code mt-2 text-slate-300 w-full">
+        <h3 class="text-xl font-fira-code mt-2 text-white w-full">
           {{ item.name }}
         </h3>
-        <p class="mt-3 text-gray-500 w-full">
+        <p class="mt-3 text-white w-full">
           {{ item.description }}
         </p>
       </div>
       <div
-        class="mt-auto flex border-t divide-x border-gray-700 divide-gray-700"
+        class="mt-auto flex border-t divide-x border-white divide-black"
       >
         <a
-          class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl shadow-sm disabled:opacity-50 disabled:pointer-events-none bg-slate-900 border-gray-700 text-white hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-600"
+          class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl shadow-sm disabled:opacity-50 disabled:pointer-events-none bg-white/5 border-white text-white hover:bg-white hover:text-black"
           [href]="item.github"
           target="_blank"
           rel="noopener noreferrer"
         >
-          View Source Code <i class="pi pi-github"></i>
+          View Source Code<i class="pi pi-github"></i>
         </a>
       </div>
     </div>
