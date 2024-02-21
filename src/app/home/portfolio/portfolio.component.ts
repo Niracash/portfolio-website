@@ -17,10 +17,8 @@ export class PortfolioComponent {
       techs: ['dotnetcore', 'csharp', 'bootstrap', 'microsoftsqlserver'],
       github: 'https://github.com/Niracash/NewsBlog',
       image: [
-        'assets/workout buddy/login.jpg',
-        'assets/workout buddy/signup.jpg',
-        'assets/workout buddy/homepage.jpg',
-        'assets/workout buddy/bmi.jpg'
+        'assets/images/test.png',
+        'assets/images/nirakash.jpg',
       ]
 
     },
@@ -31,11 +29,7 @@ export class PortfolioComponent {
       techs: ['csharp', 'dotnetcore', 'angularjs', 'microsoftsqlserver'],
       github: 'https://github.com/Niracash/JobNotesAPI',
       image: [
-        'assets/projexus/login.jpg',
-        'assets/projexus/signup.jpg',
-        'assets/projexus/view.jpg',
-        'assets/projexus/delete.jpg',
-        'assets/projexus/add.jpg',
+
       ]
 
     },
@@ -46,9 +40,7 @@ export class PortfolioComponent {
       techs: ['csharp', 'xml'],
       github: 'https://github.com/Niracash/RiotAPI',
       image: [
-        'assets/simongame/end.jpg',
-        'assets/simongame/howto.jpg',
-        'assets/simongame/start.jpg'
+
       ]
     },
     {
@@ -58,12 +50,29 @@ export class PortfolioComponent {
       techs: ['python'],
       github: 'https://github.com/Niracash/PythonHealth',
       image: [
-        'assets/product manager/categories.jpg',
-        'assets/product manager/landing.jpg',
-        'assets/product manager/login.jpg',
-        'assets/product manager/manage.jpg',
+
       ]
     },
-  ]
+  ];
+    // New property to track the current image index for each project
+    currentImageIndices: {[key: number]: number} = {};
 
+    constructor() {
+      // Initialize currentImageIndices with 0s
+      this.projects.forEach((_, index) => this.currentImageIndices[index] = 0);
+    }
+  
+    // Function to show the next image
+    showNext(projectIndex: number): void {
+      if (this.currentImageIndices[projectIndex] < this.projects[projectIndex].image.length - 1) {
+        this.currentImageIndices[projectIndex]++;
+      }
+    }
+  
+    // Function to show the previous image
+    showPrevious(projectIndex: number): void {
+      if (this.currentImageIndices[projectIndex] > 0) {
+        this.currentImageIndices[projectIndex]--;
+      }
+    }
 }
