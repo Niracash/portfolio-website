@@ -17,8 +17,15 @@ export class PortfolioComponent {
       techs: ['dotnetcore', 'csharp', 'bootstrap', 'microsoftsqlserver'],
       github: 'https://github.com/Niracash/NewsBlog',
       image: [
-        'assets/images/test.png',
-        'assets/images/nirakash.jpg',
+        'assets/projects/newsblog/blog1.png',
+        'assets/projects/newsblog/blog2.png',
+        'assets/projects/newsblog/blog3.png',
+        'assets/projects/newsblog/blog4.png',
+        'assets/projects/newsblog/blog5.png',
+        'assets/projects/newsblog/blog6.png',
+        'assets/projects/newsblog/blog7.png',
+
+
       ]
 
     },
@@ -29,6 +36,13 @@ export class PortfolioComponent {
       techs: ['csharp', 'dotnetcore', 'angularjs', 'microsoftsqlserver'],
       github: 'https://github.com/Niracash/JobNotesAPI',
       image: [
+        'assets/projects/jobnotes/jobnotes1.png',
+        'assets/projects/jobnotes/jobnotes2.png',
+        'assets/projects/jobnotes/jobnotes3.png',
+        'assets/projects/jobnotes/jobnotes4.png',
+        'assets/projects/jobnotes/jobnotes5.png',
+        'assets/projects/jobnotes/jobnotes6.png',
+
 
       ]
 
@@ -40,7 +54,8 @@ export class PortfolioComponent {
       techs: ['csharp', 'xml'],
       github: 'https://github.com/Niracash/RiotAPI',
       image: [
-
+        'assets/projects/riotapi/riotapi1.png',
+        'assets/projects/riotapi/riotapi2.png'
       ]
     },
     {
@@ -50,7 +65,8 @@ export class PortfolioComponent {
       techs: ['python'],
       github: 'https://github.com/Niracash/PythonHealth',
       image: [
-
+        'assets/projects/pythonhealth/pyhealth1.png',
+        'assets/projects/pythonhealth/pyhealth2.png'
       ]
     },
   ];

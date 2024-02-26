@@ -17,13 +17,11 @@ export class ContactComponent {
 
   private toastService = inject(HotToastService);
 
-  showToast() {
-    this.toastService.success('Email copied')
-  }
+
   copyText() {
     const text = 'nirakashmail@gmail.com';
     this.clipboard.copy(text);
-    this.showToast()
+    
   }
 
 }

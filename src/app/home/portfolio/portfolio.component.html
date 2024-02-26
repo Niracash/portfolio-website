@@ -13,8 +13,13 @@
   <div class="relative">
     <div class="flex justify-center items-center rounded-t-xl overflow-hidden w-full min-h-[350px] rounded-lg bg-black px-10">
       <!-- Added padding (px-10) to the container to ensure image doesn't overlap with buttons -->
-      <img *ngIf="item.image.length > 0 && item.image[currentImageIndices[i]]" alt="image" class="max-w-full max-h-full object-contain" [src]="item.image[currentImageIndices[i]]"/>
-    </div>
+      <a *ngIf="item.image.length > 0 && item.image[currentImageIndices[i]]" 
+        href="{{item.image[currentImageIndices[i]]}}" 
+        target="_blank">
+       <img alt="image" 
+            class="max-w-full max-h-full object-contain" 
+            [src]="item.image[currentImageIndices[i]]">
+     </a>    </div>
     <!-- Previous Button -->
     <button type="button" (click)="showPrevious(i)" class="absolute inset-y-0 left-0 flex justify-center items-center w-10 h-full text-white hover:bg-white hover:text-black border-r-4 border-black">
       <span class="text-2xl">&#8592;</span>
