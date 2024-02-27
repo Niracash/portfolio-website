@@ -1,7 +1,5 @@
 import { Component, OnInit, ChangeDetectorRef, inject } from '@angular/core';
 import { GithubApiService } from '../services/github-api.service'
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 @Component({
   selector: 'app-about',
@@ -28,48 +26,4 @@ export class AboutComponent implements OnInit {
     });
   }
 
-  ngAfterViewInit() {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.fromTo("#title", {
-      y: 100,
-      opacity: 0,
-    }, {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      scrollTrigger: {
-        trigger: "#title",
-        start: "top 75%",
-        once: true
-      },
-    });
-
-    gsap.fromTo("#grid", {
-      y: 100,
-      opacity: 0,
-    }, {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      scrollTrigger: {
-        trigger: "#grid",
-        start: "top 75%",
-        once: true
-      },
-    });
-    gsap.fromTo("#github", {
-      y: 100,
-      opacity: 0,
-    }, {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      scrollTrigger: {
-        trigger: "#github",
-        start: "top 75%",
-        once: true
-      },
-    });
-  }
 }
