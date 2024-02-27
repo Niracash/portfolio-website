@@ -22,6 +22,7 @@ export class HeaderComponent {
     if (element) {
       const yCoordinate = element.getBoundingClientRect().top + window.pageYOffset - 75;
       window.scrollTo({ top: yCoordinate, behavior: 'smooth' });
+      this.navbarOpen = false;
     }
   }
 
