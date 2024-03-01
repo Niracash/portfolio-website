@@ -13,12 +13,15 @@
   }
   
   .typewriter {
-    @apply overflow-hidden  whitespace-nowrap tracking-wider;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 0.125rem; /* Adjusted from 'tracking-wider', adapt as needed */
     border-right: .15em solid #fff;
     font-family: 'Fira Code', monospace;
-    animation: typing 5s steps(40, end) 3.8s forwards, 
-                blink-caret .5s steps(1, end) 5s, 
-                erase-caret 0.1s 8.8s forwards;
+    animation: typing 5s steps(40, end) forwards, 
+               blink-caret .75s step-end 5s 6, /* Blink 6 times after typing */
+               /* Adjusted to remove 'erase-caret', adapted timing for cursor disappearance */
+               blink-caret .75s step-end 8.75s forwards;
   }
   
   
