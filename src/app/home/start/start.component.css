@@ -16,7 +16,7 @@
   @apply overflow-hidden  whitespace-nowrap tracking-wider;
   border-right: .15em solid #fff;
   font-family: 'Fira Code', monospace;
-  animation: typing 5s steps(40, end) 3.8s forwards, 
+  animation: typing 5s steps(40, end) 0s forwards, 
               blink-caret .5s steps(1, end) 5s, 
               erase-caret 0.1s 8.8s forwards;
 }
