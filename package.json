@@ -1,6 +1,7 @@
 {
   "name": "portfolio-website",
   "version": "0.0.0",
+  "homepage": "https://niracash.github.io/portfolio-website",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
