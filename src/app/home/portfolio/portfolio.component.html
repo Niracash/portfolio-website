@@ -1,35 +1,29 @@
 <!-- Card Blog -->
 <div class="max-w-full h-full px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-  <h1 class="text-white font-fira-code text-center mb-10 text-2xl md:text-3xl lg:text-4xl font-bold bg-clip-text">
-    <span class="text-successgreen">2.0</span> Portfolio
-    <div
-      class="absolute inset-0 w-full h-full bg-backgroundrgb [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]">
-    </div>
+  <h1 class="text-white font-fira-code text-center mb-10 text-2xl md:text-3xl lg:text-4xl font-bold">
+    <span class="text-green-500">2.0</span> Portfolio
   </h1>
   <!-- Grid -->
   <div class="grid sm:grid-cols-1 lg:grid-cols-4 gap-8">
     <ng-container *ngFor="let item of projects; let i = index">
       <!-- Card -->
-      <div id="projects{{i}}" class="group flex flex-col h-full shadow-sm rounded-xl bg-black">
+      <div id="projects{{i}}" class="group flex flex-col h-full shadow-lg rounded-xl bg-black transition duration-300 ease-in-out transform hover:scale-105">
         <!-- Slider -->
         <div class="relative">
-          <div
-            class="flex justify-center items-center rounded-t-xl overflow-hidden w-full min-h-[350px] rounded-lg bg-black px-10">
-            <!-- Added padding (px-10) to the container to ensure image doesn't overlap with buttons -->
-            <a *ngIf="item.image.length > 0 && item.image[currentImageIndices[i]]"
-              href="{{item.image[currentImageIndices[i]]}}" target="_blank">
+          <div class="flex justify-center items-center rounded-t-xl overflow-hidden w-full min-h-[250px] bg-black px-10">
+            <a *ngIf="item.image.length > 0 && item.image[currentImageIndices[i]]" href="{{item.image[currentImageIndices[i]]}}" target="_blank">
               <img alt="image" class="max-w-full max-h-full object-contain" [src]="item.image[currentImageIndices[i]]">
             </a>
           </div>
           <!-- Previous Button -->
           <button type="button" (click)="showPrevious(i)"
-            class="absolute inset-y-0 left-0 flex justify-center items-center w-10 h-full text-white hover:bg-white hover:text-black border-r-4 border-black">
+            class="absolute inset-y-0 left-0 flex justify-center items-center w-10 h-full text-white hover:bg-white hover:text-black border-r-4 border-black transition duration-300">
             <span class="text-2xl">&#8592;</span>
             <span class="sr-only">Previous</span>
           </button>
           <!-- Next Button -->
           <button type="button" (click)="showNext(i)"
-            class="absolute inset-y-0 right-0 flex justify-center items-center w-10 h-full text-white hover:bg-white hover:text-black border-l-4 border-black">
+            class="absolute inset-y-0 right-0 flex justify-center items-center w-10 h-full text-white hover:bg-white hover:text-black border-l-4 border-black transition duration-300">
             <span class="text-2xl">&#8594;</span>
             <span class="sr-only">Next</span>
           </button>
@@ -41,12 +35,11 @@
                 (click)="currentImageIndices[i] = dotIndex"></span>
             </ng-container>
           </div>
-        </div> <!-- Correctly closed Slider div here -->
+        </div>
         <!-- End Slider -->
         <div class="p-4 md:p-6 flex flex-wrap">
           <ng-container *ngFor="let tech of item.techs; let techIndex = index">
-            <span
-              class="mx-1 p-1 text-xs font-semibold uppercase rounded-full bg-terminal text-white min-w-max md:mt-0 mt-2">
+            <span class="mx-1 p-1 text-xs font-semibold uppercase rounded-full bg-gray-700 text-white min-w-max md:mt-0 mt-2">
               <!-- Tech Icons -->
               <i class="devicon-{{ tech }}-plain colored"></i>
               {{ tech === "angularjs" ? "angular" : tech }}
@@ -59,13 +52,21 @@
             {{ item.description }}
           </p>
         </div>
-        <div class="mt-auto flex border-t divide-x border-white divide-black">
-          <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl shadow-sm disabled:opacity-50 disabled:pointer-events-none bg-white/5 border-white text-white hover:bg-white hover:text-black"
+        <div class="mt-auto flex border-t border-white" [ngClass]="{'rounded-b-xl': !item.livePreview}">
+          <a [ngClass]="{'w-full rounded-b-xl': !item.livePreview, 'w-1/2 rounded-bl-xl': item.livePreview}"
+            class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium shadow-sm bg-black text-white hover:text-errorred transition duration-300"
             [href]="item.github" target="_blank" rel="noopener noreferrer">
             View Source Code<i class="pi pi-github"></i>
           </a>
+          <a *ngIf="item.livePreview" class="w-1/2 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium shadow-sm bg-black text-white hover:text-successgreen transition duration-300 rounded-br-xl border-l border-white"
+            [href]="item.livePreview" target="_blank" rel="noopener noreferrer">
+            Live Preview<i class="pi pi-globe"></i>
+          </a>
         </div>
-      </div> <!-- End Card -->
+      </div>
+      <!-- End Card -->
     </ng-container>
-  </div> <!-- End Grid -->
-</div> <!-- End Card Blog -->
+  </div>
+  <!-- End Grid -->
+</div>
+<!-- End Card Blog -->

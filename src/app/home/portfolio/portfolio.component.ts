@@ -15,7 +15,8 @@ export class PortfolioComponent {
       type: 'Web Application',
       description: 'The News Blog Web API is an easy-to-use website where people can read and post news articles. It has a special login area for managing everything, built with a simple design to keep things running smoothly.',
       techs: ['dotnetcore', 'csharp', 'bootstrap', 'microsoftsqlserver'],
-      github: 'https://github.com/Niracash/NewsBlog',
+      github: 'https://github.com/Niracash/NewsBlogV2',
+      livePreview: 'https://newsblogproject.azurewebsites.net/',
       image: [
         'assets/projects/newsblog/blog1.png',
         'assets/projects/newsblog/blog2.png',
