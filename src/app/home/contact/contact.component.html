@@ -9,7 +9,7 @@
       id="getintouch"
       class="text-white font-fira-code text-center mb-10 text-2xl md:text-3xl lg:text-4xl font-bold bg-clip-text"
     >
-      <span class="text-successgreen">4.0</span> Contact me!
+      <span class="text-successgreen">3.0</span> Contact me!
       <div
         class="absolute inset-0 w-full h-full bg-backgroundrgb [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"
       ></div>
@@ -81,6 +81,10 @@
         </span>
       </button>
     </div>
+          <!-- Show 'Copied!' inline without affecting layout -->
+          <span class="text-successgreen" *ngIf="isCopied" style="margin-left: 10px; font-weight: bold;">
+            Copied!
+          </span>
     <div>
       <p class="text-white font-fira-code mt-4">
         Don't like mails? Send me a
