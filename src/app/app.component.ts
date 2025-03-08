@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
-import { Event, NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { Event, NavigationEnd, Router} from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
@@ -11,7 +11,7 @@ declare const gtag: Function;
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, HomeComponent, ContactComponent, PortfolioComponent],
+  imports: [CommonModule, HeaderComponent, FooterComponent, HomeComponent, ContactComponent, PortfolioComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 
