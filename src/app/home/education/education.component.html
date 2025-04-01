@@ -1,0 +1,69 @@
+<div class="max-w-full px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto" id="education">
+    <h1 class="text-white font-fira-code text-center mb-10 text-2xl md:text-3xl lg:text-4xl font-bold">
+      <span class="text-successgreen">3.0</span> Education
+    </h1>
+  
+    <!-- Filter -->
+    <div class="flex justify-center mb-10">
+      <select [(ngModel)]="selectedLevel"
+              class="bg-black text-white border border-white rounded-lg p-2 font-fira-code">
+        <option value="All">All Levels</option>
+        <option value="Beginner">Beginner</option>
+        <option value="Experienced">Experienced</option>
+        <option value="Advanced">Advanced</option>
+      </select>
+    </div>
+  
+    <!-- Mandatory Courses -->
+    <div class="mb-12">
+      <h2 class="text-white text-center text-xl md:text-2xl font-semibold mb-6">
+        Courses – <span class="text-successgreen">Mandatory</span>
+      </h2>
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <ng-container *ngFor="let subject of filteredMandatory">
+          <div class="bg-black border border-white rounded-xl p-4 text-white shadow-md hover:shadow-lg transition duration-300">
+            <div class="flex justify-between items-center">
+              <p class="text-sm md:text-base font-fira-code">{{ subject.name }}</p>
+              <span
+                class="text-xs px-2 py-0.5 rounded-full font-semibold"
+                [ngClass]="{
+                  'bg-green-200 text-green-800': subject.level === 'Beginner',
+                  'bg-yellow-200 text-yellow-800': subject.level === 'Experienced',
+                  'bg-red-200 text-red-800': subject.level === 'Advanced'
+                }"
+              >
+                {{ subject.level }}
+              </span>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  
+    <!-- Elective Courses -->
+    <div>
+      <h2 class="text-white text-center text-xl md:text-2xl font-semibold mb-6">
+        Courses – <span class="text-successgreen">Optional</span>
+      </h2>
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <ng-container *ngFor="let subject of filteredElectives">
+          <div class="bg-black border border-white rounded-xl p-4 text-white shadow-md hover:shadow-lg transition duration-300">
+            <div class="flex justify-between items-center">
+              <p class="text-sm md:text-base font-fira-code">{{ subject.name }}</p>
+              <span
+                class="text-xs px-2 py-0.5 rounded-full font-semibold"
+                [ngClass]="{
+                  'bg-green-200 text-green-800': subject.level === 'Beginner',
+                  'bg-yellow-200 text-yellow-800': subject.level === 'Experienced',
+                  'bg-red-200 text-red-800': subject.level === 'Advanced'
+                }"
+              >
+                {{ subject.level }}
+              </span>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  
